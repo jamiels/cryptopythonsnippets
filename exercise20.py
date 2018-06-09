@@ -56,6 +56,7 @@ def initialize_pl(pairs):
     for p in pairs:
         data = pd.DataFrame([[p,0,0,0,0]],columns=col_names)
         pl = pl.append(data,ignore_index=True)
+    pl.index = pairs
     return pl, col_names
 
 def initialize_blotter():
